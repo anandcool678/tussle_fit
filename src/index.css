@@ -48,10 +48,11 @@ code {
 
 }
 .telephone{
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.454);
   border: 1px rgba(255, 255, 255, 0.30) solid;
   border-radius: 5px;
   padding-left: 10px;
+  color: rgb(255, 255, 255,0.60) ;
  
 }
 .telephone::placeholder{
