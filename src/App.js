@@ -1,17 +1,20 @@
 import logo from './logo.png';
 import './App.css';
+import videoPlay from './tussle_video.mp4';
+import React, {useState} from 'react';
+import countryData from './country_code.json';
 
 function App() {
+  console.log(countryData[0])
+  const [selectCountry,setSelectCountry] = useState(countryData[0].dial_code);
   return (
+    
     <div className="App  container-fluid">
-      <video loop autoplay muted>
-        <source
-          src="https://vimeo.com/707969803"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
+      <video autoPlay loop muted className="background-video">
+        <source src={videoPlay} type="video/mp4" />
       </video>
-      <div className="heading">
+     <div className="position-relative">
+     <div className="heading">
         <img src={logo} className="logoImg" />
         <h1>
           Tussle Fit
@@ -26,9 +29,24 @@ function App() {
           Log in
         </h6>
         <div className="d-flex justify-content-start mb-4">
-        <select name="timeframe" id="timeframe" className='countryCode mr-4' >
-          
-          <option value="+91">+91</option>
+        {/* <select
+      value={countryData}
+      onChange={(e) =>
+      setSelectedCategory(e.target.value)}
+      className="product-dropdown"
+      name="product-dropdown"
+      >
+      <option value="">All</option>
+      {e.map((item) => (
+      <option value={item.dial_code}>{item.category}</option>
+      ))}
+   </select> */}
+        <select value={countryData} onChange={e=>setSelectCountry(e.currentTarget.value)} className="countryCode">
+        {countryData.map(e =>(
+            <option className='timeframe-option' value={e}>
+              {e.dial_code}
+            </option>
+          ))}
         </select>
         <input type="tel" placeholder="Enter phone number" className="telephone"></input>
         </div>
@@ -56,6 +74,7 @@ function App() {
           </p>
           <p>Privacy Policy</p>
         </div>
+     </div>
       
     </div>
   );
