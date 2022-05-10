@@ -15,7 +15,7 @@ function App() {
       </video>
      <div className="position-relative">
      <div className="heading">
-        <img src={logo} className="logoImg" />
+        <img src={logo} className="logoImg" alt='logo'/>
         <h1>
           Tussle Fit
         </h1>
