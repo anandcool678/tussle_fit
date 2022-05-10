@@ -43,7 +43,7 @@ function App() {
    </select> */}
         <select value={countryData} onChange={e=>setSelectCountry(e.currentTarget.value)} className="countryCode">
         {countryData.map(e =>(
-            <option className='timeframe-option' value={e}>
+            <option className='timeframe-option' value={e.dial_code}>
               {e.dial_code}
             </option>
           ))}
