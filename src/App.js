@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import countryData from './country_code.json';
 
 function App() {
-  console.log(countryData[0])
+  // console.log(countryData[0])
   const [selectCountry,setSelectCountry] = useState(countryData[0].dial_code);
   return (
     
@@ -67,5 +67,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
