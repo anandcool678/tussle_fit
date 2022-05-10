@@ -28,23 +28,11 @@ function App() {
         <h6 className="d-flex justify-content-start mb-4">
           Log in
         </h6>
-        <div className="d-flex justify-content-start mb-4">
-        {/* <select
-      value={countryData}
-      onChange={(e) =>
-      setSelectedCategory(e.target.value)}
-      className="product-dropdown"
-      name="product-dropdown"
-      >
-      <option value="">All</option>
-      {e.map((item) => (
-      <option value={item.dial_code}>{item.category}</option>
-      ))}
-   </select> */}
-        <select value={countryData} onChange={e=>setSelectCountry(e.currentTarget.value)} className="countryCode">
+        <div className="d-flex justify-content-start mb-4 p-0">
+        <select value={selectCountry} onChange={e=>setSelectCountry(e.currentTarget.value)} className="countryCode">
         {countryData.map(e =>(
             <option className='timeframe-option' value={e.dial_code}>
-              {e.dial_code}
+              {e.dial_code} {e.code}
             </option>
           ))}
         </select>

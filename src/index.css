@@ -31,7 +31,7 @@ code {
 .login{
   background-color: rgba(0, 0, 0, 0.603);
   border-radius: 10px;
-  width: 310px;
+  width: 335px;
 }
 .x{
   display: flex;
@@ -42,8 +42,10 @@ code {
 .countryCode{
   height: 30px;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.454);
   color: rgb(255, 255, 255,0.60) ;
+  margin-right: 8px;
+
 }
 .telephone{
   background-color: transparent;
@@ -56,7 +58,7 @@ code {
   color: rgb(255, 255, 255,0.60);
 }
 .button{
-  width: 280px;
+  width: 304px;
   background-image: linear-gradient(#ffd60a, #ff9f0a);
 }
 .contactSupport{
